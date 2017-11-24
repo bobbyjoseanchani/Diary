@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='customstyles.css') }}">
+<body>
+<title>My diary</title>
+<div class="main-div"">
+	<header class="flex-container">
+	  <h1>My Diary</h1>
+	</header>
+	<section class="fadeIn">
+		{% block body %}{% endblock %}
+	</section>
+	<footer>Copyright &copy; Bobby Jose</footer>
+</div>
+</body>
+</html>

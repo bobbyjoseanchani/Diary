@@ -1,0 +1,164 @@
+body { 
+	background: #eee; 
+	text-align: center;
+	font-family: 'Georgia', serif; 
+}
+
+article{
+	width: 100%;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.main-div {
+	width: 420px;
+	margin: auto;
+}
+
+
+.calendar{
+	margin: 20px 10px;
+	padding: 10px;
+	background: white;
+	border-radius: 5px;
+	text-align: center
+}
+table{
+	width: 100%;
+}
+.date-cell{
+	background: hotpink;
+	border-radius: 30px;
+	padding: 8px;
+}
+.date-cell>a{
+	color: white;
+}
+.date-cell:hover {
+	background: hotpink;
+	-webkit-transform: scale(1.5, 1.5); /* Safari */
+    transform: scale(1.5, 1.5);
+	-webkit-transition: -webkit-transform .1s; /* Safari */
+    transition: transform .1s;
+}
+.action-link a, .breadcrumb li a{
+	color: hotpink !important;
+}
+
+.action-link:hover {
+	-webkit-transform: scale(1.5, 1.5); /* Safari */
+    transform: scale(1.5, 1.5);
+	-webkit-transition: -webkit-transform .1s; /* Safari */
+    transition: transform .1s;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+}
+footer{
+	padding: 15px 5px 10px 5px;
+	font-size: .75em;
+	font-weight: bold;
+}
+
+@keyframes fadeIn {
+   0% {opacity: 0;}
+   100% {opacity: 1;}
+} 
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: .63s;
+	animation-timing-function:  ease-in;	
+}
+header > h1{
+	letter-spacing: 3px;
+	text-shadow: 3px 2px 6px hotpink;
+	color: white;
+}
+/*
+Styles for breadcrumbs
+*/
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+	border-radius: 5px;
+	text-align: left;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+/*
+Styles for entry
+*/
+.entry{
+	background: white;
+	text-align: center;
+	width: 100%;
+	padding: 10px 5px 20px 5px;
+	border-radius: 5px;
+	margin: 20px 5px 20px 5px;
+}
+
+/*
+Styles for form
+*/
+input[type=text], textarea {
+    width: 100%;
+    padding: 15px 10px 15px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	border-radius: 5px;
+    border: 1px solid #ccc;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: hotpink;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+	font-family: 'Georgia', serif; 	
+	font-size: 18px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes bring-up {
+	0% {
+		-ms-transform: translateY(300px); /* IE 9 */
+		-webkit-transform: translateY(300px); /* Safari */
+		transform: translateY(300px);
+	}
+	100% {
+	}
+} 
+
+.bring-up {
+    animation-name: bring-up;
+    animation-duration: .63s;
+	animation-timing-function:  ease-in;	
+    transition: transform;
+}

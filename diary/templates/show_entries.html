@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+<article>	
+	<ul class="breadcrumb">
+		<li><a href="{{url_for('show_days', year = year, month = month) }}">{{ year }}</a></li>
+		<li><a href="{{url_for('show_days', year = year, month = month) }}">{{ month_name }}</a></li>
+		<li>{{ day }}</li>
+	</ul>
+</article>
+<h4 class="action-link">
+	<a href="{{url_for('entry_page', my_day = day, my_month = month, my_year = year)}}">Make an entry</a>
+</h4>
+<div>
+	{% for entry in entries %}
+	<article class="entry card bring-up">
+		<h3>{{ entry.title }}</h3>
+		<p>{{ entry.text|safe }}</p>
+	</article>
+	{% else %}
+	<div style="padding: 20px 0px;" class="card bring-up">	
+		<em>Unbelievable.  No entries here so far</em>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

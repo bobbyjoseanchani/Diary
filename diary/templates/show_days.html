@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block body %}
+<table class="calendar flex-container card bring-up">
+	<tr>
+		<td>
+			<table>
+				<tr>
+					<td class="action-link">
+						<a href="{{url_for('show_days', year = my_year - 1, month = my_month) }}"> <h3> << </h3> </a>
+					</td>
+					<td class="action-link">
+						<a href="{{url_for('show_days', year = my_year -1 if my_month - 1 == 0 else my_year, month = 12 if my_month - 1 == 0 else my_month - 1) }}"><h3> < </h3></a>
+					</td>
+					<td>
+						<h3>{{ my_month_name }}, {{ my_year }}</h3>
+					</td>
+					<td class="action-link">
+						<a href="{{url_for('show_days', year = my_year +1 if my_month + 1 > 12 else my_year, month = 1 if my_month + 1 > 12 else my_month + 1) }}"><h3> > </h3></a>
+					</td>
+					<td class="action-link">
+						<a href="{{url_for('show_days', year = my_year + 1, month = my_month) }}"><h3> >> </h3></a>
+					</td>
+				</tr>				
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table cellspacing="20">
+				{% for week in month_days %}
+				<tr>
+					{% for day in week %}
+					<td>
+						{% if day != 0 %}
+						<div class="date-cell">	
+						<a href="{{url_for('show_entries', my_year = my_year, my_month = my_month, my_day = day) }}">{{ day }}</a>
+						</div>
+						{% else %}
+						{% endif %}
+					</td>
+					{% endfor %}
+				</tr>
+				{% endfor %}
+			</table>
+		</td>
+	</tr>
+</table>
+{% endblock %}

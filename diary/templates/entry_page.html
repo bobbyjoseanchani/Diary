@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+<article>	
+	<ul class="breadcrumb">
+		<li><a href="{{url_for('show_days', year = year, month = month) }}">{{ year }}</a></li>
+		<li><a href="{{url_for('show_days', year = year, month = month) }}">{{ month_name }}</a></li>
+		<li><a href="{{url_for('show_entries', my_year = year, my_month = month, my_day = day, my_month_name = month_name) }}">{{ day }}</a></li>
+		<li>Make entry</li>
+	</ul>
+</article>
+
+<div class="entry card bring-up">
+	<form action="{{ url_for('add_entry', mydate = ('%s-%s-%s') % (year,month, day)) }}" method=post>
+		<input type=text size=120 name=title placeholder="Title">
+		<textarea name=text rows=5 cols=40 placeholder="Text"></textarea>
+		<input type=submit value=Save>
+	</form>
+</div>
+{% endblock %}

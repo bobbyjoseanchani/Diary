@@ -1,2 +1,4 @@
 venv
-diary.*
+*.egg-info
+*.db
+*pyc

@@ -1,0 +1,9 @@
+click==6.7
+-e git+https://github.com/bobbyjoseanchani/Diary.git@0acd27caed652844fa88b6db6001f6a6481a2caf#egg=diary
+Flask==0.12.2
+Flask-SQLAlchemy==2.3.2
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+SQLAlchemy==1.1.15
+Werkzeug==0.12.2
